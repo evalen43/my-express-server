@@ -1,0 +1,116 @@
+body {
+    font-family: "Montserrat";
+}
+
+h1 {
+    color:#fff;
+    font-size: 3rem;
+    line-height: 1.5;
+    /* padding: 0px 50px 0px 50px; */
+}
+
+h2{
+    font-family: "Montserrat-Bold";
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+    /* padding: 0px 0px; */
+}
+
+h3{
+    font-family:"Montserrat-Bold";
+    font-size: 1.5rem;
+}
+
+.container-fluid{
+    padding: 2% 15%;
+}
+
+.nav-top{
+    background-color:#82AAE3 ;
+    /* padding : 0px 50px 50px 50px; */
+}
+
+.nav-bottom{
+    background-color: #82AAE3;
+}
+.top-container{
+    background-color:#82AAE3;
+    /* padding: 80px 50px 80px 50px; */
+}
+
+.middle-container{
+    /* background-color: #91d8e4; */
+    background-color:#fff;
+}
+
+.pricing-container{
+    background-color: #82AAE3;
+    font-family: "Montserrat-light";
+}
+
+.navbar{
+    padding-top: 1.5rem;
+}
+
+.navbar-brand{
+    font-family:"Ubuntu";
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+   
+}
+.nav-item{
+    padding:0 15px;
+}
+.nav-link{
+    font-size: 1.2rem;
+    font-family: "Montserrat-light";
+    color: #fff;
+}
+
+.icon{
+    color:#82AAE3;
+    padding-top: 50px;
+    
+}
+
+.icon:hover{
+    color:#BFEAF5;
+}
+
+.wicons{
+    text-align: center;
+}
+
+.download-button{
+    margin:5% 3% 5% 0;
+}
+
+.laptop-light{
+    width: 95%;
+    margin:0% 0% 15% 0;
+}
+
+/* .iphone-app{
+    width:65%; 
+    transform: rotate(15deg);
+    position: absolute;
+    right: 25%;
+    
+} */
+
+#top{
+
+    padding: 0% 0%;
+    /* margin: 5px;
+    background-color:#82AAE3 */
+}
+
+#taxes2go{
+    background-color: #fff;
+}
+
+#customer-portal{
+    background-color: #82AAE3;
+}
