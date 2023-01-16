@@ -1,6 +1,6 @@
 {
   "name": "my-express-server",
-  "version": "1.0.0",
+  "version": "18.13.0",
   "description": "evci server express",
   "main": "server.js",
   "scripts": {
@@ -8,8 +8,17 @@
     "start": "node server.js"
   },
   "author": "Ernesto Valenzuela",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evalen43/my-express-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/evalen43/my-express-server/issues"
+  },
+  "homepage": "https://github.com/evalen43/my-express-server#readme"
 }
