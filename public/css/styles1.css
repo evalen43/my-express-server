@@ -47,7 +47,7 @@ h3{
 
 .pricing-container{
     background-color: #82AAE3;
-    font-family: "Montserrat-light";
+    /* font-family: "Montserrat-light"; */
 }
 
 .navbar{
@@ -113,5 +113,9 @@ h3{
 }
 
 #customer-portal{
+    background-color: #82AAE3;
+}
+
+.bkgnd-light-blue{
     background-color: #82AAE3;
 }
