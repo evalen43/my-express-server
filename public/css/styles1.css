@@ -1,5 +1,5 @@
 body {
-    font-family: "Montserrat";
+    font-family: "Montserrat-Bold";
 }
 
 h1 {
@@ -100,8 +100,15 @@ h3{
 }
 
 .cloud{
-    width: 95%;
+    width: 85%;
     margin:15% 0% 15% 0;
+}
+
+.float-img-left{
+    float:left;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    padding:2px
 }
 /* .iphone-app{
     width:65%; 
