@@ -1,5 +1,6 @@
 body {
-    font-family: "Montserrat-Bold";
+    font-family: "Montserrat";
+    color:#000000;
 }
 
 h1 {
@@ -72,7 +73,7 @@ h3{
 }
 
 .icon{
-    color:#82AAE3;
+    ;
     padding-top: 50px;
     
 }
