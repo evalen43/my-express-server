@@ -244,7 +244,7 @@
 											<h4 class="my-0 fw-normal ">Partnerships/S-Corps</h4>
 									</div>
 									<div class="card-body">
-											<h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">$400/Starting</small></h1>
+											<h1 class="card-title pricing-card-title"><small class="text-muted fw-light">$400/Starting</small></h1>
 											<ul class="list-unstyled ">
 													<li>Gross Income < $250K</li>
 													<li>P&L completed in recognized accounting software</li>
@@ -314,6 +314,48 @@
 			
 	</section>
 
+	<!-- Contact Us -->
+
+	<section id="contact-us">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="pricing-header pb-md-4 mx-auto text-left">
+						<h1 style="color: #000">Contact Us</h1>
+						<p class="lead">
+During peak tax season (March-April), the best way to contact us is to use the link above for Taxes2Go.
+						</p>
+						<p>If you have general questions, or need additional information, please, use the contact form. We endeavour to answer all emails within 24-48 hours.</p>
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<h1>Form Submit</h1>
+					<form action="https://public.herotofu.com/v1/a417f340-b6f1-11ed-9b4c-9779a04c69de" method="post" accept-charset="UTF-8"></form>
+					<!-- <form target="_blank" action="https://formsubmit.co/ev@evconsulting-inc.com" method="POST"> -->
+					  <div class="form-group">
+						<div class="form-row">
+						  <div class="col">
+							<input type="text" name="name" class="form-control" placeholder="Full Name" required>
+						  </div>
+						  <div class="col">
+							<input type="email" name="email" class="form-control" placeholder="Email Address" required>
+						  </div>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<textarea placeholder="Your Message" class="form-control" name="message" rows="10" required></textarea>
+					  </div>
+					  <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Form</button>
+					</form>
+					<div style="text-indent:-99999px; white-space:nowrap; overflow:hidden; position:absolute;" aria-hidden="true">
+						<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+					  </div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- Bottom Navigation Bar -->
 
 	<section id="bottom-nav">
@@ -344,5 +386,29 @@
 			crossorigin=" anonymous "></script>
     
 </body>
+
+function sendEmail(endpointUrl, data, onSuccess, onError) {
+    $.ajax({
+        type: "POST",
+        url: endpointUrl
+        data: JSON.stringify(data),
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: onSuccess,
+        error: function(xhr, status) {
+          if (typeof this.statusCode[xhr.status] !== 'undefined') {
+            return false;
+          }
+  
+          onError(err);
+        },
+        statusCode: {
+          // Endpoint thinks that it's likely a spam/bot request, you need to change "spam protection mode" to "never" in HeroTofu forms
+          422: function(response) {
+            alert("Cannot send request, are you robot?");
+          },
+        }
+      });
+  }
 
 </html>
