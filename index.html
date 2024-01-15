@@ -136,12 +136,7 @@
 
 	</section>
 
-						<!-- <button type="button" class="btn btn-outline-light btn-lg download-button" ><i class="fa-brands fa-google-play"></i>&nbsp;Contact Us</button>     
-				</div>
-			</div>
-		</div>    
-	</section> 
-	 
+
 	
 	<!-- Bank Products -->
 	<section id="Bank-Products">
@@ -199,41 +194,7 @@
 							</div>
 						</div>
 					</div>
-					<!-- <div class="col-lg-3 col-md-6">
-						<div class="card wicons">
-							<!-- <div class="row"> -->
-							<!-- <div class="card-header">
-									<h4 class="my-0 fw-normal ">Head of Household</h4>
-							</div> -->
-							<!-- <div class="card-body">
-								<h1 class="card-title pricing-card-title">$0<small class="text-muted fw-light">$300</small></h1>
-								<ul class="list-unstyled ">
-										<li>Two W-2s</li>
-										<li>One Dependent</li>
-										<li>$50 for Each Additional Dependent</li>
-										<li>Itemizers add $75</li>
-										<li>Discount Coupons Available until February 15, 2023.</li>
-								</ul>
-							</div>
-						</div>
-					</div> --> 
-					<!-- <div class="col-lg-3 col-md-6">
-							<div class="card wicons">
-									<!-- <div class="row"> -->
-									<!-- <div class="card-header">
-											<h4 class="my-0 fw-normal ">Families</h4>
-									</div>
-									<div class="card-body">
-											<h1 class="card-title pricing-card-title"><small class="text-muted fw-light">$350</small></h1>
-											<ul class="list-unstyled ">
-													<li>Two W-2s</li>
-													<li>One Dependent</li>
-													<li>$50 for Each Form or Additional Dependent</li>
-													<li>Discount Coupons Available until February 15, 2023.</li>
-											</ul>
-									</div>
-							</div>
-					</div> --> 
+
 					<div class="col-lg-6 col-md-12">
 							<div class="card wicons">
 									<!-- <div class="row"> -->
@@ -297,8 +258,27 @@
 	<section id="customer-portal">
 		<div class="container-fluid">
 			<div class="row">
+				<div class="col-lg-6">
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+						<h2>Upload Documents</h2>
+						<div class="form-group">
+							<input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
+						</div>
+						<button type="submit" class="btn btn-primary" name="submit">Upload</button>
+					</form>
+				</div>
+				<div class="col-lg-6 pricing-header pb-md-4 mx-auto text-left">
+					<h1>Customer Portal</h1>
+					<p class="lead">Our customer portal is a secure online space where you can sign and upload your tax return documents without needing to visit our office. Once your portal is activated, you can upload documents for your tax preparer to review. You can also sign forms online, and we'll notify your tax preparer once they're signed. Start by uploading your documents on the left.</p>
+				</div>
+			</div>
+		</div>
+	</section>	
+<!-- 	<section id="customer-portal">
+		<div class="container-fluid">
+			<div class="row">
 				<div class="col-lg-6 ">
-					<!-- <img src="img/cloud.png" class="img-fluid cloud"  alt="cloud"> -->
+ 					<!-- <img src="img/cloud.png" class="img-fluid cloud"  alt="cloud"> 
 					<img src="public/img/EVCI-Portal2.png" class="img-fluid" alt="portal">
 				</div>
 				<div class="col-lg-6 pricing-header pb-md-4 mx-auto text-left">
@@ -308,7 +288,8 @@
 			</div>
 		</div>
 			
-	</section>
+	</section> --> -->
+<!--Let's Get in Touch-->	
 	<div class="row">
 	<div class="col-lg-6 px-5">
 		<div class="pricing-header pb-md-4 mx-auto text-left">
@@ -324,7 +305,7 @@
 			</p>
 		</div>
 	</div>
-	<div class="col-lg-6 px-5">
+	<div class="col-lg-6 pr-5 pt-5 pb-5">
 		<h1>Form Submit</h1>
 		<form target="_blank" action="https://formsubmit.co/ev@evconsulting-inc.com" method="POST">
 			<div class="form-group">
@@ -370,6 +351,7 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.2.3/js/bootstrap.bundle.min.js"
 	integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
 	crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     
 </body>
 
