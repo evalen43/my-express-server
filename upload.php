@@ -1,4 +1,12 @@
 <?php
+session_start();
+
+if (!isset($_SESSION['userid'])) {
+    // The user is not logged in
+    echo "Please log in before uploading files.";
+    exit;
+}
+
 $target_dir = "clients/";
 
 // Array of allowed file types
