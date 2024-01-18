@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (isset($_SESSION['message'])) {
+    echo $_SESSION['message'];
+    unset($_SESSION['message']);
+}
+
 if (!isset($_SESSION['userid'])) {
     // The user is not logged in
     echo "Please log in before uploading files.";

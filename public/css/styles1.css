@@ -1,16 +1,16 @@
-body {
+html body {
     font-family: "Montserrat-Bold";
     color:#000000;
 }
 
-h1 {
+html h1 {
     color:#fff;
     font-size: 3rem;
     line-height: 1.5;
     /* padding: 0px 50px 0px 50px; */
 }
 
-h2{
+html h2{
     font-family: "Montserrat-Bold";
     font-size: 2.5rem;
     line-height: 1.5;
@@ -18,7 +18,7 @@ h2{
     /* padding: 0px 0px; */
 }
 
-h3{
+html h3{
     font-family:"Montserrat-Bold";
     font-size: 1.5rem;
 }

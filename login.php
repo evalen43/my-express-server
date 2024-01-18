@@ -55,6 +55,9 @@ $stmt = $conn->prepare("SELECT `id`, password FROM clients WHERE username = ?");
         if ($password === $row['password']) {
             // The password is correct. Store the user's ID in the session
             $_SESSION['userid'] = $row['id'];
+
+            // Store a success message in the session
+            $_SESSION['message'] = 'Login successful!';
         
             // Redirect to upload.php
             header('Location: upload.php');
