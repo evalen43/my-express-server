@@ -9,10 +9,10 @@ error_reporting(E_ALL);
 session_start();
 
 // Database connection parameters
-$db_host = 'ggehicom.ipagemysql.com';
-$db_user = 'ggehicom';
+$db_host = 'localhost';    
+$db_user = 'ernesto';
 $db_password = 'Evalen1243$';
-$db_name = 'ecvci_taxes';
+$db_name = 'evciztma_evci_taxes';
 
 // Create a new database connection
 $conn = new mysqli($db_host, $db_user, $db_password, $db_name);
