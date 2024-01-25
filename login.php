@@ -9,13 +9,18 @@ error_reporting(E_ALL);
 session_start();
 
 // Database connection parameters
-$db_host = 'localhost';    
+/* $db_host = 'localhost';    
 $db_user = 'evciztma_ernesto';
 $db_password = 'Evalen1243$';
-$db_name = 'evciztma_evci_taxes';
+$db_name = 'evciztma_evci_taxes'; */
 
 // Create a new database connection
-$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
+//$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
+
+// Hiding the database credentials
+require_once '/home/evciztma/db_config.php';
+
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
 // Check the connection
 if ($conn->connect_error) {
