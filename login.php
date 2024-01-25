@@ -10,7 +10,7 @@ session_start();
 
 // Database connection parameters
 $db_host = 'localhost';    
-$db_user = 'ernesto';
+$db_user = 'evciztma_ernesto';
 $db_password = 'Evalen1243$';
 $db_name = 'evciztma_evci_taxes';
 
@@ -51,8 +51,8 @@ $stmt = $conn->prepare("SELECT `id`, password FROM clients WHERE username = ?");
 
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        // if (password_verify($password, $row['password'])) {
-        if ($password === $row['password']) {
+        if (password_verify($password, $row['password'])) {
+        //if ($password === $row['password']) {
             // The password is correct. Store the user's ID in the session
             $_SESSION['userid'] = $row['id'];
 
