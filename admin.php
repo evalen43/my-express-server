@@ -1,19 +1,20 @@
+<?php session_start(); ?> 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Admin Panel - ECVCI Taxes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- Include Your Custom CSS -->
-    <link rel="stylesheet" href="resources/css/styles1.css">
+    <!-- <link rel="stylesheet" href="resources/css/styles1.css"> -->
 </head>
 <body>
-    <?php session_start(); ?>
     <div class="col-lg-6">
     <?php if(isset($_SESSION["success_message"])): ?>
     <div class="alert alert-success">
-        <?php echo $_SESSION["success_message"]; ?>
-    </div>
+    <?php echo $_SESSION["success_message"]; ?>
     <?php unset($_SESSION["success_message"]); ?>
     <?php endif; ?>
+    </div>     
         <h2>Admin Login</h2>
         <form action="insert_client.php" method="post">
             <div class="form-group">
