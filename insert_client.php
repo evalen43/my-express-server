@@ -52,7 +52,7 @@ if (isset($_POST['adminLogin'])) {
                     $_SESSION["username"] = $username;                            
                     
                     // Redirect user to welcome page
-                    header("location: welcome.php");
+                    header("Refresh:0");
                 } else {
                     // Display an error message if password is not valid
                     echo "The password you entered was not valid.";
@@ -72,10 +72,10 @@ if (isset($_POST['adminLogin'])) {
 
 if (isset($_POST['addClient'])) {
     // Prepare an insert statement
-    $stmt = $conn->prepare("INSERT INTO clients (id, username, password) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO clients (username, password) VALUES (?, ?)");
 
     // Bind variables to the prepared statement as parameters
-    $stmt->bind_param("iss", $clientId, $clientUsername, $hashedPassword);
+    $stmt->bind_param("ss", $clientUsername, $hashedPassword);
 
     // Set parameters
     $clientId = $_POST['clientId'];
