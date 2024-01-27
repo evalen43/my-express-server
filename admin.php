@@ -6,7 +6,14 @@
     <link rel="stylesheet" href="resources/css/styles1.css">
 </head>
 <body>
+    <?php session_start(); ?>
     <div class="col-lg-6">
+    <?php if(isset($_SESSION["success_message"])): ?>
+    <div class="alert alert-success">
+        <?php echo $_SESSION["success_message"]; ?>
+    </div>
+    <?php unset($_SESSION["success_message"]); ?>
+    <?php endif; ?>
         <h2>Admin Login</h2>
         <form action="insert_client.php" method="post">
             <div class="form-group">
@@ -22,10 +29,10 @@
         <hr>
         <h2>Add New Client</h2>
         <form action="insert_client.php" method="post">
-            <div class="form-group">
+<!--             <div class="form-group">
                 <label for="clientId">Client ID:</label>
                 <input type="text" name="clientId" id="clientId" required>
-            </div>
+            </div> -->
             <div class="form-group">
                 <label for="clientUsername">Client Username:</label>
                 <input type="text" name="clientUsername" id="clientUsername" required>

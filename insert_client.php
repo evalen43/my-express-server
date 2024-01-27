@@ -52,6 +52,7 @@ if (isset($_POST['adminLogin'])) {
                     $_SESSION["username"] = $username;                            
                     
                     // Redirect user to welcome page
+                    $_SESSION["success_message"] = "Login successful!";
                     header("Refresh:0");
                 } else {
                     // Display an error message if password is not valid
