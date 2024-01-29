@@ -30,10 +30,6 @@
         <hr>
         <h2>Add New Client</h2>
         <form action="insert_client.php" method="post">
-<!--             <div class="form-group">
-                <label for="clientId">Client ID:</label>
-                <input type="text" name="clientId" id="clientId" required>
-            </div> -->
             <div class="form-group">
                 <label for="clientUsername">Client Username:</label>
                 <input type="text" name="clientUsername" id="clientUsername" required>

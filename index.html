@@ -141,8 +141,6 @@
 
 	</section>
 
-
-	
 	<!-- Bank Products -->
 	<section id="Bank-Products">
 		<div class="container-fluid">
@@ -255,17 +253,16 @@
 		<script>
 		// Initially disable the upload form
 		document.getElementById('fileToUpload').disabled = true;
-		
 		// Enable the upload form when the login form is submitted
 		document.getElementById('loginForm').addEventListener('submit', function() {
 			document.getElementById('fileToUpload').disabled = false;
 		});
 		</script>
-	
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-6">
 					<h2>Login</h2>
+					<p>Use the form below to login to your customer portal. If you don't have an account, please contact us to get started. Use the form in the Section: Let's Get in Touch</p>
 					<form action="login.php" method="post">
 						<div class="form-group">
 							<label for="username">Username:</label>
@@ -279,6 +276,7 @@
 					</form>
 					<hr>
 					<h2>Upload Documents</h2>
+					<p>Only PDF, JPEG, and PNG files are accepted up to a size of 2MB. To upload multiple files, press the CTRL key and select the files with your mouse. If the total size exceeds 2MB, please upload the files one by one by clicking the "Choose Files" button each time.</p>
 					<form action="upload.php" method="post" enctype="multipart/form-data">
 						<div class="form-group">
 							<input type="file" name="fileToUpload[]" id="fileToUpload" multiple>
@@ -288,7 +286,12 @@
 				</div>
 				<div class="col-lg-6 pricing-header pb-md-4 mx-auto text-left">
 					<h1>Customer Portal</h1>
-					<p class="lead">Our customer portal is a secure online space where you can sign and upload your tax return documents without needing to visit our office. Once your portal is activated, you can upload documents for your tax preparer to review. You can also sign forms online, and we'll notify your tax preparer once they're signed. Start by uploading your documents on the left.</p>
+					<p class="lead">Our customer portal is a secure online space where you can sign and upload your tax return documents without needing to visit our office. Once your portal is activated, you can upload documents for your tax preparer to review. Start by uploading your documents on the left.</p>
+					<ul>
+						<li>Driver's license</li>
+						<li>Social Security number</li>
+						<li>Tax forms such as W-2, 1099-NEC, etc.</li>
+					</ul>
 				</div>
 			</div>
 		</div>      
