@@ -2,20 +2,10 @@
 // Start the session
 session_start();
 
-// Database connection parameters
-/* $db_host = 'localhost';
-$db_user = 'ernesto';
-$db_password = 'Evalen1243$';
-$db_name = 'evciztma_evci_taxes';
-
-// Create a new database connection
-$conn = new mysqli($db_host, $db_user, $db_password, $db_name); */
-
 // Hiding the database credentials
 require_once '/home/evciztma/db_config.php';
 
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-
 
 // Check connection
 if ($conn->connect_error) {
@@ -49,22 +39,26 @@ if (isset($_POST['adminLogin'])) {
                     // Store data in session variables
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $id;
-                    $_SESSION["username"] = $username;                            
+                    $_SESSION["username"] = $username;
+                    $_SESSION["admin"] = $username; // Add this line to check if admin is logged in                            
                     
-                    // Redirect user to welcome page
-                    $_SESSION["success_message"] = "Login successful!";
-                    header("Refresh:0");
+                    // Display success message
+                    $message = "Login successful!";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
                 } else {
                     // Display an error message if password is not valid
-                    echo "The password you entered was not valid.";
+                    $message = "The password you entered was not valid.";
+                    echo "<script type='text/javascript'>alert('$message');</script>";
                 }
             }
         } else {
             // Display an error message if username doesn't exist
-            echo "No account found with that username.";
+            $message = "No account found with that username.";
+            echo "<script type='text/javascript'>alert('$message');</script>";
         }
     } else {
-        echo "Oops! Something went wrong. Please try again later.";
+        $message = "Oops! Something went wrong. Please try again later.";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     }
 
     // Close statement
@@ -85,7 +79,8 @@ if (isset($_POST['addClient'])) {
 
     // Attempt to execute the prepared statement
     if ($stmt->execute()) {
-        echo "New client added successfully.";
+        $message = "New client added successfully.";
+        echo "<script type='text/javascript'>alert('$message');</script>";
     } else {
         echo "Error: " . $stmt->error;
     }

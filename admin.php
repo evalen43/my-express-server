@@ -8,23 +8,26 @@
     <!-- <link rel="stylesheet" href="resources/css/styles1.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#showFiles").click(function(){
+$(document).ready(function(){
+    $("#showFiles").click(function(){
+        $.get('check_login.php', function(data) {
+            if(data == 'logged in') {
                 if($("#fileList").is(":visible")) {
                     $("#fileList").hide();
                 } else {
-                    <?php if(isset($_SESSION['username'])): ?>
-                        $("#fileList").show();
-                    <?php else: ?>
-                        alert("Please, login first");
-                    <?php endif; ?>
+                    $("#fileList").show();
                 }
-            });
-
-            $("#fileList a").click(function() {
-                $("#fileList").hide();
-            });
+            } else {
+                alert("Please, login first");
+                
+            }
         });
+    });
+
+    $("#fileList a").click(function() {
+        $("#fileList").hide();
+    });
+});
 </script>
 </head>
 <body>
@@ -65,7 +68,7 @@
         <button id="showFiles" class="btn btn-primary">Available Files</button>
         <div id="fileList" style="display: none;">
         <?php
-        if(isset($_SESSION['username'])) { // Check if admin is logged in
+        if(isset($_SESSION['admin'])) { // Check if admin is logged in
             $files = glob('/home/evciztma/public_html/clients/*');
             foreach($files as $file) {
                 if(is_file($file)) {
