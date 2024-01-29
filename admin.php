@@ -8,12 +8,24 @@
     <!-- <link rel="stylesheet" href="resources/css/styles1.css"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $("#showFiles").click(function(){
-            $("#fileList").toggle();
+        $(document).ready(function(){
+            $("#showFiles").click(function(){
+                if($("#fileList").is(":visible")) {
+                    $("#fileList").hide();
+                } else {
+                    <?php if(isset($_SESSION['username'])): ?>
+                        $("#fileList").show();
+                    <?php else: ?>
+                        alert("Please, login first");
+                    <?php endif; ?>
+                }
+            });
+
+            $("#fileList a").click(function() {
+                $("#fileList").hide();
+            });
         });
-    });
-    </script>
+</script>
 </head>
 <body>
     <div class="col-lg-6">
