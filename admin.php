@@ -6,6 +6,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!-- Include Your Custom CSS -->
     <!-- <link rel="stylesheet" href="resources/css/styles1.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#showFiles").click(function(){
+            $("#fileList").toggle();
+        });
+    });
+    </script>
 </head>
 <body>
     <div class="col-lg-6">
@@ -40,6 +48,21 @@
             </div>
             <button type="submit" class="btn btn-primary" name="addClient">Add Client</button>
         </form>
+        <hr>
+        <h2>Download Files</h2>
+        <button id="showFiles" class="btn btn-primary">Available Files</button>
+        <div id="fileList" style="display: none;">
+        <?php
+        if(isset($_SESSION['username'])) { // Check if admin is logged in
+            $files = glob('/home/evciztma/public_html/clients/*');
+            foreach($files as $file) {
+                if(is_file($file)) {
+                    echo '<a href="'.$file.'" download>'.basename($file).'</a><br>';
+                }
+            }
+        }
+        ?>
+        </div>
     </div>
     
 </body>
