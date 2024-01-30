@@ -12,7 +12,7 @@ $calculatedHash = 'sha1=' . hash_hmac('sha1', $payload, $secret, false);
 // Verify hash
 if (hash_equals($headerHash, $calculatedHash)) {
     // Execute command (e.g., git pull)
-    exec('cd /path/to/your/repo && git pull');
+    exec('cd /home/evciztma/repositories/my-express-server && git pull');
     // Add more commands as needed
     echo 'Deployment triggered!';
 } else {
