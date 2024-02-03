@@ -8,15 +8,6 @@ error_reporting(E_ALL);
 // Start the session
 session_start();
 
-// Database connection parameters
-/* $db_host = 'localhost';    
-$db_user = 'evciztma_ernesto';
-$db_password = 'Evalen1243$';
-$db_name = 'evciztma_evci_taxes'; */
-
-// Create a new database connection
-//$conn = new mysqli($db_host, $db_user, $db_password, $db_name);
-
 // Hiding the database credentials
 require_once '/home/evciztma/db_config.php';
 
