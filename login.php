@@ -53,7 +53,7 @@ $stmt = $conn->prepare("SELECT `id`, password FROM clients WHERE username = ?");
             $_SESSION['userid'] = $row['id'];
             
             // Store a success message in the session
-            $_SESSION['message'] = 'Login successful! <br> <a href="#customer-portal">Go to Customer Portal</a>';
+            $_SESSION['message'] = 'Login successful! <br> <a href="https://evci-taxes4u.com/#customer-portal">Go to Customer Portal</a>';
             echo "Login successful!";
 
             // Redirect to upload.php
