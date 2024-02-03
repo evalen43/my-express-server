@@ -65,7 +65,7 @@ $stmt = $conn->prepare("SELECT `id`, password FROM clients WHERE username = ?");
             $_SESSION['message'] = 'Login successful!';
             echo "Login successful!";
             echo "<br>";
-            echo "<a href='index.html#customer-portal'>Go to Customer Portal</a>";
+            echo "<a href='#customer-portal'>Go to Customer Portal</a>";
 
             // Redirect to upload.php
             header('Location: upload.php');
