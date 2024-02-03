@@ -268,6 +268,13 @@
 						</div>
 						<button type="submit" class="btn btn-primary" name="login">Login</button>
 					</form>
+					<!-- Display the session message here -->
+					<?php
+					if (isset($_SESSION['message'])) {
+						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
+					?>
 					<hr>
 					<h2>Upload Documents</h2>
 					<p>Only PDF, JPEG, and PNG files are accepted up to a size of 2MB. To upload multiple files, press the CTRL key and select the files with your mouse. If the total size exceeds 2MB, please upload the files one by one by clicking the "Choose Files" button each time.</p>
