@@ -284,6 +284,13 @@
 						</div>
 						<button type="submit" class="btn btn-primary" name="submit">Upload</button>
 					</form>
+					<!-- Display the session message here -->
+					<?php
+					if (isset($_SESSION['message'])) {
+						echo $_SESSION['message'];
+						unset($_SESSION['message']);
+					}
+					?>
 				</div>
 				<div class="col-lg-6 pricing-header pb-md-4 mx-auto text-left">
 					<h1>Customer Portal</h1>

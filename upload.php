@@ -38,6 +38,7 @@ for($i=0; $i<count($_FILES['fileToUpload']['name']); $i++) {
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"][$i]);
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"][$i], $target_file)) {
         echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"][$i])). " has been uploaded.";
+        $_SESSION['message'] = 'File uploaded successfully! <br> <a href="https://evci-taxes4u.com/#customer-portal">Go to Customer Portal</a>';
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
