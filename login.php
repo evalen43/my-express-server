@@ -53,8 +53,13 @@ $stmt = $conn->prepare("SELECT `id`, password FROM clients WHERE username = ?");
             $_SESSION['userid'] = $row['id'];
             
             // Store a success message in the session
-            $_SESSION['message'] = 'Login successful! <br> <a href="https://evci-taxes4u.com/#customer-portal">Go to Customer Portal</a>';
-            echo "Login successful!";
+            if (isset($_GET['responseType']) && $_GET['responseType'] == 'text') {
+                $_SESSION['message'] = 'Login successful!';
+                echo "Login successful!";
+            } else {
+                $_SESSION['message'] = 'Login successful! <br> <a href="https://evci-taxes4u.com/#customer-portal">Go to Customer Portal</a>';
+                echo "Login successful!";
+            }
 
             // Redirect to upload.php
             header('Location: upload.php');
